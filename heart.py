@@ -1,8 +1,9 @@
 import math, sys, time
 
-W, H = 100, 50
+W, H = 50, 30
 THETA_STEP = 0.01
-SCALE_Z, SCALE_Y = 20, 10
+SCALE_Z, SCALE_Y = 10, 10
+
 CX, CY = W // 2, H // 2
 
 K2 = 50.0
@@ -22,7 +23,7 @@ def print_frame(m):
 def heart_yz(t):
     z0 = (-math.cos(t)**3 - math.cos(t)**2 + 2*math.cos(t)) * SCALE_Z
     y0 = ( math.sqrt(2) * math.sin(t)**3 ) * SCALE_Y
-    return z0, y0
+    return y0, z0
 
 def render_frame(A):
     disp, zbuf = blank_buffers()
