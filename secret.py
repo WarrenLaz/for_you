@@ -1,14 +1,15 @@
 import math, sys, time
 
+#constants 
 W, H = 50, 30
 THETA_STEP = 0.01
 SCALE_Z, SCALE_Y = 10, 10
-
+#
 CX, CY = W // 2, H // 2
-
+#
 K2 = 50.0
 K1 = 35.0
-
+#
 def blank_buffers():
     display = [[' ' for _ in range(W)] for _ in range(H)]
     zbuf    = [[-1e9 for _ in range(W)] for _ in range(H)]
